@@ -215,6 +215,19 @@ class FactorGraph:
 
         with torch.cuda.amp.autocast(enabled=False):
             self.target = coords1 + delta.to(dtype=torch.float)
+
+
+
+
+            print("___________________________________________")
+            print(self.target.shape)
+            print(self.target)
+            print("___________________________________________")
+            
+            
+            
+            
+            
             self.weight = weight.to(dtype=torch.float)
 
             ht, wd = self.coords0.shape[0:2]
